@@ -1,0 +1,45 @@
+# FL scenario
+m: 100 # number of the clients
+K: 100 # number of the rounds
+alg: admm_insa # fedavg or admm_insa or admm_in or admm
+seed: 123
+tag: FF # tag for logging
+tag0: F # parent folder tag for logging
+
+# dataset
+dataset: mnist # mnist or linreg or cifar10 or tinyimagenet
+subset: 0 # use a subset of the whole dataset
+iid: 0 # data distribution
+
+# model
+model: cnn
+activation: relu
+loss: cn # mse or cn
+
+# server side parameters
+frac: 0.1 # proportion of the active clients per round
+
+# client side parameters
+optimizer: sgd # sgd or adam
+decay: 0 # weight decay
+momentum: 0 # momentum
+bs: 50 # batch size, 0 means FGD
+lr: 0.01 # learning rate
+lr_decay: 0 # lr decay
+E: 10 # number of epochs
+c_i: 0.01 # strong convexity constant
+
+# FedADMM parameter
+delta: 0.01
+beta: 10
+mu: 5
+tau: 2
+
+# Other parameters
+debug: true # save results in the debug folder
+save_freq: 1 # callback
+device: cpu # cuda:0 or cpu
+plot: 1 # plot or not
+
+# test params
+inexact_z: true # use z^k instead of u_i^k

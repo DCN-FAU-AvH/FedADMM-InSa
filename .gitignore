@@ -1,0 +1,20 @@
+*.gz
+*.pyc
+*.npy
+*.jpg
+*.png
+*.meta
+*.html
+*.json
+*.pth
+*.pkl
+*.pdf
+*.pt
+*.gif
+*.mp4
+*.zip
+/results/serious/
+/results/debug/
+/dataset/
+.ipynb_checkpoints/
+/To Run
